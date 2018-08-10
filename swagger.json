@@ -1,0 +1,49 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "",
+      "description": "",
+      "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "host": "localhost:3000",
+    "basePath": "/api/swagger/v1",
+    "paths": {
+      "/test1": {
+        "get": {
+          "x-swagger-router-controller": "middleware-name1",
+          "operationId": "swagTest",
+          "tags": ["/test"],
+          "description": "",
+          "parameters": [],
+          "responses": {}
+        }
+      },
+      "/auth/register": {
+        "post": {
+            "tags": [
+              "auth"
+            ],
+            "summary": "Create a new user account",
+            "parameters": [
+                {
+                    "name": "username",
+                    
+                    "description": "The username of the user",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "name": "password",
+                    "description": "The password of the user",
+                    "required": true,
+                    "type": "string",
+                    "format": "password"
+                }
+            ],
+            "responses": {
+            }
+        }
+    } 
+    }
+}
